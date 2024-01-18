@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer;
+        let one = str.split('1').filter((el) => el !== '').length;
+        let zero = str.split('0').filter((el) => el !== '').length;
+        if (one > zero) answer = zero;
+        else answer = one;
+        return answer;
+      }
+
+      const str = '1010101110001001101011';
+      //   const str = '0001100';
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
