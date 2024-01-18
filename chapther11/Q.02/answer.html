@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = +str[0]; //첫 번째 문자를 숫자로 변경하여 대입
+        for (let i = 1; i < str.length; i++) {
+          // 두 수 중에서 하나라도 '0' 혹은 '1'인 경우, 곱하기보다는 더하기 수행
+          if (+str[i] <= 1 || answer <= 1) answer += +str[i];
+          else answer *= +str[i];
+        }
+        return answer;
+      }
+
+      // const str = '02984';
+      // const str = '167';
+      const str = '567';
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

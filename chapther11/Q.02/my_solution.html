@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = str[0];
+        for (let i = 1; i < str.length; i++) {
+          if (str[i - 1] == 0) answer += str[i];
+          else answer *= str[i];
+        }
+        // 오답노트: 값이 1인 경우에도 곱셈 보다는 덧셈이 더 유리하다
+        return answer;
+      }
+
+      const str = '02984';
+      //   const str = '567';
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
